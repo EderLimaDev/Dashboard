@@ -44,6 +44,7 @@ router.post('/', async (req, res)=>{
    
 })
 
+//atualizar dispositivos
 router.put('/:id', async (req, res)=>{
     try{
         const updateDeviceId = await Device.updateOne(
