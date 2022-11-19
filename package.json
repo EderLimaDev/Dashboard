@@ -4,7 +4,9 @@
   "description": "Dashboard para projeto de TCC, sistema de monitoramento de energia",
   "main": "server.js",
   "scripts": {
-    "device": "nodemon server.js",
+    "backend": "nodemon server.js",
+    "frontend": "cd frontend && npm start",
+    "device": "concurrently \"npm run backend\" \"npm run frontend\"",
     "start": "node server.js"
   },
   "keywords": [],
@@ -12,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.1",
+    "concurrently": "^7.5.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "moongose": "^1.0.0",
