@@ -31,7 +31,6 @@ const Medidas = ()=>{
                 })}
             </ListaCards>
         </ListaDevices>
-
     )
 
 } 

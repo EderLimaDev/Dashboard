@@ -1,6 +1,6 @@
-import { response } from "express";
 import React from "react";
 import styled from "styled-components";
+import {Link} from 'react-router-dom';
 
 const StyleCards = styled.div`
     box-sizing: border-box;
@@ -43,15 +43,17 @@ const Cards = ({projeto})=>{
     return(
        <>
             <StyleCards>
-                    <Conteudo>  
-                        <h3>{projeto.nome}</h3>
-                        <img src={projeto.imagem} alt="imagem"/>
-                            <Info>
-                                <h4>Kw/h :{projeto.kwh}</h4>
-                                <h4>Amp :{projeto.corrente}</h4>
-                                <h4>Volts :{projeto.voltagem}</h4>
-                                <h4>F.P :{projeto.fp}</h4>
-                            </Info>
+                    <Conteudo>
+                        <Link to={`/medidas/${projeto._id}`}>
+                            <h3>{projeto.nome}</h3>
+                            <img src={projeto.imagem} alt="imagem"/>
+                                <Info>
+                                    <h4>Kw/h :{projeto.kwh}</h4>
+                                    <h4>Amp :{projeto.corrente}</h4>
+                                    <h4>Volts :{projeto.voltagem}</h4>
+                                    <h4>F.P :{projeto.fp}</h4>
+                                </Info>
+                         </Link>  
                     </Conteudo>
             </StyleCards>
 
