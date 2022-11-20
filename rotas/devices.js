@@ -21,6 +21,8 @@ router.get('/', async (req, res)=>{
 router.post('/', async (req, res)=>{
     const novoDevice = new Device({
         nome: req.body.nome,
+        email: req.body.email,
+        imagem: req.body.imagem,
         kwh: req.body.kwh,
         corrente: req.body.corrente,
         voltagem: req.body.voltagem,
