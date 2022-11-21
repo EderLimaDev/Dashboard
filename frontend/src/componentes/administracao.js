@@ -1,7 +1,8 @@
 import React from "react";
 import styled from 'styled-components'
 import ListaDevices from "../componentes/listaDevices";
-import {Tabs, Tab} from 'react-bootstrap';
+import {Container, Tabs, Tab} from 'react-bootstrap';
+import AdmDevice from "./AdmDevice";
 
 const AdminLogo = styled.div`
     background: black;
@@ -20,7 +21,7 @@ const Conteiner = styled.div`
 const AdminPage = ()=>{
     return(
        
-        <Conteiner>
+        <Container>
                 <AdminLogo>
                     <h2>Administração da conta</h2>
 
@@ -33,12 +34,16 @@ const AdminPage = ()=>{
                     </Tab>
                         
                     <Tab eventKey="Detalhes" title="Detalhes">
-                        <h2>Detalhes</h2>
+                        <AdmDevice />
+                    </Tab>
+
+                    <Tab eventKey="Novo" title="Novo Dispositivo">
+                        <h2>Novo Dispositivo</h2>
                     </Tab>
             
                 </Tabs>
 
-         </Conteiner>
+         </Container>
 
     )
 

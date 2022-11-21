@@ -1,28 +1,42 @@
 import React from "react";
-import {Table} from 'react-bootstrap'
+import {Container, Table, Image} from 'react-bootstrap'
+import styled from 'styled-components'
+import {useApi} from '../hooks/useApi'
+import moment from 'moment'
+
+const Foto = styled(Image)`
+    height: 100px;
+`;
 
 const ListaDevices = ()=>{
+
+    const {data} = useApi('/devices')
     return(
-        <div>
-    <Table striped bordered hover>
-            <thead>
-                <tr>
-                <th>Foto</th>
-                <th>Device</th>
-                <th>Data</th>
-                </tr>
-            </thead>
+        <Container>
+            <Table striped bordered hover variant="dark">
+                <thead>
+                    <tr>
+                    <th>Foto</th>
+                    <th>Dispositivo</th>
+                    <th>Data</th>
+                    </tr>
+                </thead>
 
-            <tbody>
-                <tr>
-                    <td><img src='https://a-static.mlcdn.com.br/800x560/geladeira-refrigerador-electrolux-240-litros-1-porta-classe-a-re31/gazinshop/344/20ddae4f611009eccbcab73fea742e3b.jpeg' alt='imagem'/></td>
-                    <td>Geladeira</td>
-                    <td>20-11-2022</td>
-                </tr>
-            </tbody>
-    </Table>
+                <tbody>
+                
+                        {data?.data?.message?.map(item =>{
+                            return(
+                                <tr>
+                                    <td><Foto src={item.imagem} alt='imagem'></Foto></td>
+                                    <td>{item.nome}</td>
+                                    <td>{moment(item.data).format('DD-MM-YYYY')}</td>
+                                </tr>)
+                        })}
+                    
+                </tbody>
+            </Table>
 
-        </div>
+        </Container>
     )
 
 }
