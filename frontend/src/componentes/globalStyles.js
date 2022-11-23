@@ -48,7 +48,7 @@ const EstilosGlobais = createGlobalStyle `
         line-height: 150%;
     }
     label{
-        color: white;
+        color: black;
         font-weight: bold;
     }
  

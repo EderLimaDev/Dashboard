@@ -35,10 +35,35 @@ router.get('/detalhes/:id', async (req, res)=>{
         })
    }
 })
+
+router.patch('/:id', async(req, res)=>{
+    try{
+        const updateDevice = await Device.updateOne(
+            {_id: req.params.id},
+            {
+                nome: req.body.nome,
+            descricao: req.body.descricao,
+            imagem: req.body.imagem}
+            )    
+            res.json({
+            success: true,
+            updated: updateDevice.nModified
+        })
+       
+    }
+    catch{
+        res.json({
+            success: false,
+            data: err
+        })
+    }
+})
+
 router.post('/', async (req, res)=>{
     const novoDevice = new Device({
         nome: req.body.nome,
         email: req.body.email,
+        descricao: req.body.descricao,
         imagem: req.body.imagem,
         kwh: req.body.kwh,
         corrente: req.body.corrente,

@@ -3,19 +3,12 @@ import styled from 'styled-components'
 import ListaDevices from "../componentes/listaDevices";
 import {Container, Tabs, Tab} from 'react-bootstrap';
 import AdmDevice from "./AdmDevice";
+import NovoDevice from "./novoDevice";
 
 const AdminLogo = styled.div`
     background: black;
     color: yellow;
 `;
-
-const Conteiner = styled.div`
-    width: 80%;
-    padding-top: 2rem;
-    margin: auto;
-    
-`;
-
 
 
 const AdminPage = ()=>{
@@ -27,8 +20,8 @@ const AdminPage = ()=>{
 
                 </AdminLogo>
 
-                <Tabs defaultActiveKey="profile" id="adm" className="mb-3">
-                    <Tab eventKey="Dispositivos" title="Meus Dispositivos">
+                <Tabs defaultActiveKey="profile" id="adm" className="mb-1">
+                    <Tab eventKey="devices" title="Meus Dispositivos">
                         <h2>Dispositivos Cadastrados</h2>
                         <ListaDevices />
                     </Tab>
@@ -38,9 +31,10 @@ const AdminPage = ()=>{
                     </Tab>
 
                     <Tab eventKey="Novo" title="Novo Dispositivo">
-                        <h2>Novo Dispositivo</h2>
+                        <NovoDevice />
                     </Tab>
-            
+                    
+        
                 </Tabs>
 
          </Container>
