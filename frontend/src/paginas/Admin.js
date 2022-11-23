@@ -2,7 +2,7 @@ import React from 'react'
 import styled  from 'styled-components'
 import {Container, Tabs, Tab} from "react-bootstrap"
 import ListaDevices from '../componentes/admin/ListaDevices';
-import AdmDevice from '../componentes/admin/AdmDevice';
+import AdmDevices from '../componentes/admin/AdmDevice';
 import NovoDevice from '../componentes/admin/NovoDevice';
 
 
@@ -39,20 +39,22 @@ const Admin = ()=>{
                         Área Administrativa
                     </h1>
                 </Descricao>
+            
+                    <Tabs defaultActiveKey="devices" id="tab1" className="mb-1">
+                        <Tab eventKey="devices" title="Meus Devices">
+                             <ListaDevices/>
+                        </Tab>
+                        <Tab eventKey="detalhes" title="Detalhes">
+                            {/* <AdmDevices/> */}
+                        </Tab>
+                        <Tab eventKey="novo" title="Novo Device">
+                             <NovoDevice/>
+                        </Tab>
+                    </Tabs> 
             </Container>
-            <div>
-                <Tabs defaultActiveKey="devices" id="tab1" className="mb-1">
-                    <Tab eventKey="devices" title="Meus Devices">
-                        <ListaDevices/>
-                    </Tab>
-                    <Tab eventKey="detalhes" title="Detalhes">
-                        <AdmDevice/>
-                    </Tab>
-                    <Tab eventKey="novo" title="Novo Device">
-                        <NovoDevice/>
-                    </Tab>
-                </Tabs>
-            </div>
+         
+                
+           
       </Geral>
     )
 }
