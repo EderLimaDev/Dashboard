@@ -5,7 +5,7 @@ import moment from 'moment'
 import {useApi} from '../hooks/useApi'
 import FormEdit from './formEdit'
 import { editRegistro, deleteRegistro } from '../services/api'
-import caixaDialogo from './caixaDialogo'
+import CaixaDialogo from './caixaDialogo'
 
 const Foto = styled(Image)`
     height: 100px;
@@ -15,13 +15,15 @@ function AdmDevice() {
 
     const del = (id)=>{
         deleteRegistro(id)
+        window.location.reload();
     }
 
     const ed = (id, data)=>{
         editRegDevice(id, data)
+        window.location.reload();
     }
 
-    const [escolha, setEscolha] = useState({
+    const [escolha] = useState({
         delete:{
             header:'Deletar Dispositivo?',
             variant:'danger',
@@ -42,7 +44,6 @@ function AdmDevice() {
     })
 
   
-    const [header, setHeader] = useState()
     const [nome, setNome] = useState()
     const [descricao, setDescricao] = useState()
     const [imagem, setImagem] = useState()
@@ -60,9 +61,8 @@ function AdmDevice() {
         email:''
     })
 
-    const manipulaShow = (device, escolhaAtual)=>{
-        setEscolhaAtual(escolhaAtual)
-        setHeader(header)
+    const manipulaShow = (device, escolha)=>{
+        setEscolhaAtual(escolha)
         setShow(true)
         setId(device._id)
         setEmail(device.email)
@@ -96,23 +96,23 @@ function AdmDevice() {
                         </tr>
                     </thead>
                     <tbody>
-                    {data?.data?.message?.map(item =>{
+                    {data?.message?.map(projeto =>{
                         return(
                             <tr>
-                                <td><Foto src={item.imagem} alt='imagem'></Foto></td>
-                                <td>{item._id}</td>
-                                <td>{item.nome}</td>
-                                <td>{moment(item.data).format('DD-MM-YYYY')}</td>
+                                <td><Foto src={projeto.imagem} alt='imagem'></Foto></td>
+                                <td>{projeto._id}</td>
+                                <td>{projeto.nome}</td>
+                                <td>{moment(projeto.data).format('DD-MM-YYYY')}</td>
                                 <td>
-                                    <Button variant="info" onClick={()=> manipulaShow(item,escolha.edit)}>Editar</Button>&nbsp;&nbsp;
-                                    <Button variant="danger" onClick={()=> manipulaShow(item,escolha.delete)}>Deletar</Button>
+                                    <Button variant="info" onClick={()=> manipulaShow(projeto,escolha.edit)}>Editar</Button>&nbsp;&nbsp;
+                                    <Button variant="danger" onClick={()=> manipulaShow(projeto,escolha.delete)}>Deletar</Button>
                                 </td>
                             </tr>)
                     })}
                         
                     </tbody>
                 </Table>
-               <caixaDialogo show={show} setShow={setShow} escolhaAtual={escolhaAtual} id={id} email={email} > 
+               <CaixaDialogo show={show} setShow={setShow} escolhaAtual={escolhaAtual} id={id} email={email} > 
                     {escolhaAtual.mostraBody && escolhaAtual.body}
                 
                     {!escolhaAtual.mostraBody && (
@@ -130,7 +130,7 @@ function AdmDevice() {
 
                         />
                     )}
-               </caixaDialogo>             
+               </CaixaDialogo>             
     </Container>
   )
 }

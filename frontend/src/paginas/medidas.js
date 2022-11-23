@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components'
-import Cards from "../componentes/cards";
+import Card from "../componentes/cards";
 import { useApi } from "../hooks/useApi";
 
 const ListaCards = styled.div`
@@ -22,12 +22,11 @@ const ListaDevices = styled.div`
 
 const Medidas = ()=>{
     const {data} = useApi('/devices')
-    console.log(data)
     return(
         <ListaDevices>
             <ListaCards>
                 {data?.data?.message?.map(projeto =>{
-                    return(<Cards key={projeto._id} projeto={projeto}/>)
+                    return(<Card key={projeto._id} projeto={projeto}/>)
                 })}
             </ListaCards>
         </ListaDevices>
