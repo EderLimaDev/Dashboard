@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 import {Container, Table, Image, Button} from 'react-bootstrap'
 import styled from 'styled-components'
 import moment from 'moment'
-import {useApi} from '../hooks/useApi'
+import {useApi} from '../../hooks/useApi'
 import FormEdit from './formEdit'
-import { editRegistro, deleteRegistro } from '../services/api'
+import { editRegistro, deleteRegistro } from '../../services/api'
 import CaixaDialogo from './caixaDialogo'
 
 const Foto = styled(Image)`

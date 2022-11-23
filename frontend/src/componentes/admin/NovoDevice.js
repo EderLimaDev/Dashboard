@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Form, Container, Button} from 'react-bootstrap'
 import styled from 'styled-components'
-import { addRegistro } from '../services/api';
+import { addRegistro } from '../../services/api';
 
 const Geral = styled.div`
 h6{
@@ -77,4 +77,4 @@ const NovoDevice = () => {
     );
 }
 
-export default NovoDevice;
+export default NovoDevice

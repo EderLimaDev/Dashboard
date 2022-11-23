@@ -57,7 +57,7 @@ const Menu = ()=>{
                     <ul>
                         <Link to='/'><li>Inicio</li></Link>
                         <Link to='/medidas'><li>Medidas</li></Link>
-                        <Link to='/administracao'><li>Administração</li></Link>
+                        <Link to='/Admin'><li>Administração</li></Link>
                         <Link to='/mensagens'><li>Mensagens</li></Link>
 
                     </ul>

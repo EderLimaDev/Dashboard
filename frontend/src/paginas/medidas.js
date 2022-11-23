@@ -20,17 +20,20 @@ const ListaDevices = styled.div`
 
 `;
 
-const Medidas = ()=>{
-    const {data} = useApi('/devices')
-    return(
+const Medidas = ()=> {
+    const { data } = useApi('/devices');
+    return (
+      
         <ListaDevices>
-            <ListaCards>
-                {data?.data?.message?.map(projeto =>{
-                    return(<Card key={projeto._id} projeto={projeto}/>)
+          <ListaCards>
+                {data?.message?.map(projeto => {
+                    return (<Card key={projeto._id} projeto={projeto} />);
                 })}
             </ListaCards>
         </ListaDevices>
-    )
+        
+    
+    );
 
 } 
 

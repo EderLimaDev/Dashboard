@@ -1,7 +1,7 @@
 import React from "react";
 import {Container, Table, Image} from 'react-bootstrap'
 import styled from 'styled-components'
-import {useApi} from '../hooks/useApi'
+import {useApi} from '../../hooks/useApi'
 import moment from 'moment'
 
 const Foto = styled(Image)`

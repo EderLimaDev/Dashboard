@@ -4,9 +4,10 @@ import EstilosGlobais from './componentes/globalStyles';
 import Bemvindo from './paginas/home';
 import Medidas from './paginas/medidas';
 import Mensagens from './paginas/mensagens';
-import AdminPage from './componentes/administracao';
 import Menu from './componentes/menu';
 import DetalhesDevice from './componentes/detalhesDevice';
+import Admin from './paginas/Admin';
+
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path='/medidas' element = {<Medidas />} />
           <Route path='/medidas/:id' element = {<DetalhesDevice />} />
           <Route path='/mensagens' element = {<Mensagens />} />
-          <Route path='/administracao' element = {<AdminPage />} />
+          <Route path='/admin' element = {<Admin />} />
       </Routes>
       
     </Router>
