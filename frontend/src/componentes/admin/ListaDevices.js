@@ -3,10 +3,13 @@ import {Container, Table, Image} from 'react-bootstrap'
 import styled from 'styled-components'
 import {useApi} from '../../hooks/useApi'
 import moment from 'moment'
+import EstilosGlobais from "../globalStyles";
 
 const Foto = styled(Image)`
     height: 100px;
 `;
+
+
 
 const ListaDevices = ()=>{
 
@@ -14,15 +17,16 @@ const ListaDevices = ()=>{
     return(
         <Container>
             <Table striped bordered hover variant="dark">
+                <EstilosGlobais />
                 <thead>
-                    <tr>
-                    <th>Foto</th>
-                    <th>Dispositivo</th>
-                    <th>Data</th>
+                    <tr className="tableHeader">
+                        <th>Foto</th>
+                        <th>Dispositivo</th>
+                        <th>Data</th>
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody className="tbodyField">
                 
                         {data?.message?.map(item =>{
                             return(

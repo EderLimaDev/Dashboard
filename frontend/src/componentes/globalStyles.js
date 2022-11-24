@@ -12,6 +12,31 @@ const EstilosGlobais = createGlobalStyle `
         overflow-x: hidden;
         text-decoration: none;
     }
+    .mb-1{
+        padding-top: 3rem;
+        font-weight:bold;
+        font-size:1.5em;
+    }
+
+    .tableHeader{
+        text-align:center;
+        font-size: 1.5rem;
+    }
+
+    .tbodyField{
+        text-align:center;
+    }
+    .form-label{
+        text-align:center;
+
+    }
+
+    .containerNewDevice{
+        background-color:#0b305e;
+        font-size:1.5rem;
+        border-radius: 12px;
+        padding:20px 20px;
+    }
 
     button{
         font-weight: bold;

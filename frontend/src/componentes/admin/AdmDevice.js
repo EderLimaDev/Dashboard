@@ -6,6 +6,7 @@ import moment from 'moment'
 import CaixaDialogo from './caixaDialogo'
 import FormEdit from './formEdit'
 import {deleteRegistro, editRegistro} from '../../services/api'
+import EstilosGlobais from '../globalStyles'
 
 const Foto = styled(Image)`
     height: 50px;
@@ -80,8 +81,9 @@ const AdmDevice = ()=>{
     return(
         <Container id='root'>
                 <Table striped bordered hover variant="dark">
+                    <EstilosGlobais />
                     <thead>
-                        <tr>
+                        <tr className='tableHeader'>
                             <th><h5>Foto</h5></th>
                             <th><h5>Device ID</h5></th>
                             <th><h5>Nome</h5></th>
@@ -89,7 +91,7 @@ const AdmDevice = ()=>{
                             <th><h5>Ações</h5></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='tbodyField'>
                         {data?.message?.map(projeto =>{
                             return(<tr>
                                     <td><Foto src={projeto.imagem} thumbnail /></td>

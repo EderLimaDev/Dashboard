@@ -2,13 +2,17 @@ import React, {useState} from 'react';
 import {Form, Container, Button} from 'react-bootstrap'
 import styled from 'styled-components'
 import { addRegistro } from '../../services/api';
+import EstilosGlobais from '../globalStyles';
 
 const Geral = styled.div`
-h6{
+h6,
+Button{
     color: white;
     font-weight:bold;
+    font-size:1.5rem;
 
 }
+
 
 `; 
 
@@ -28,7 +32,8 @@ const NovoDevice = () => {
 
     return (
     <Geral>   
-        <Container>
+        <Container className='containerNewDevice'>
+            <EstilosGlobais />
              <Form>
                 <Form.Group class="mb-3" controId="email">
                     <Form.Label><h6>Email</h6></Form.Label>
