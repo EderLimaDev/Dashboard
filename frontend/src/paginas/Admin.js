@@ -35,11 +35,6 @@ const Descricao = styled.div`
     }
  `;
 
- const Tabs = styled.div`
-    margin: auto;
- 
- 
- `;
 
  
 const Admin = ()=>{
@@ -51,7 +46,7 @@ const Admin = ()=>{
                         Área Administrativa
                     </h1>
                 </Descricao>
-                
+
                     <Tabs defaultActiveKey="devices" id="tab1" className="mb-1">
                         <Tab eventKey="devices" title="Meus Devices">
                             <ListaDevices/>
