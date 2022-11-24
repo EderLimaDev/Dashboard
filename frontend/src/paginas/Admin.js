@@ -19,8 +19,9 @@ const Descricao = styled.div`
     text-align: center;
     border-radius: 12px;
     box-shadow: 5px 5px white;
+
     
-    h1{
+    h2{
         font-weight: bold;
         color: yellow;
        
@@ -42,11 +43,11 @@ const Admin = ()=>{
         <Geral>
             <Container>
                 <Descricao>
-                    <h1>
+                    <h2>
                         Área Administrativa
-                    </h1>
+                    </h2>
                 </Descricao>
-                        <Tabs defaultActiveKey="devices" id="tab1" className="mb-1" >
+                        <Tabs defaultActiveKey="devices" id="tab1" className="mb-1">
                             <EstilosGlobais />
                             <Tab eventKey="devices" title="Meus Dispositivos">
                                 <ListaDevices/>

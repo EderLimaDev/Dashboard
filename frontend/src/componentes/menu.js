@@ -6,6 +6,9 @@ const StyledMenu = styled.div`
     background: #0b305e;
     color: white;
     font-weight: bold;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
     min-height: 10vh;
     display: flex;
     margin: auto;
@@ -50,20 +53,25 @@ const StyledMenu = styled.div`
 
 `;
 
+const Div = styled.div` 
+    height:13vh;
+`;
+
+
 const Menu = ()=>{
     return(
-        <div>
+        <Div>
             <StyledMenu>
                 <h1>Sistema de Medidas</h1>
                     <ul>
                         <Link to='/'><li>Inicio</li></Link>
                         <Link to='/medidas'><li>Medidas</li></Link>
                         <Link to='/Admin'><li>Administração</li></Link>
-                        <Link to='/mensagens'><li>Mensagens</li></Link>
+                    
 
                     </ul>
             </StyledMenu>
-        </div>
+        </Div>
 
     )
 

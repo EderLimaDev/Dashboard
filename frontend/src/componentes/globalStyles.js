@@ -18,6 +18,7 @@ const EstilosGlobais = createGlobalStyle `
         font-size:1.5em;
     }
 
+
     .tableHeader{
         text-align:center;
         font-size: 1.5rem;
