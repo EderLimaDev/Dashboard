@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {Link} from 'react-router-dom'
 
 const StyledMenu = styled.div`
-    background: #588178;
+    background: #0b305e;
     color: white;
     font-weight: bold;
     min-height: 10vh;
@@ -12,6 +12,7 @@ const StyledMenu = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 1rem 10rem;
+    box-shadow: 10px black;
     
 
     ul{
@@ -29,7 +30,7 @@ const StyledMenu = styled.div`
         margin: auto;
         border-radius: 12px;
         &:hover{
-            color: red;
+            color: #0b305e;
             border:none;   
         }
 

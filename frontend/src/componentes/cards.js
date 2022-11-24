@@ -4,10 +4,12 @@ import {Link} from 'react-router-dom';
 
 const StyleCards = styled.div`
     box-sizing: border-box;
-    background-color: #58617b;
+    background-color: #0b305e;
     border-color: black;
+    border-radius: 12px;
     cursor: pointer;
     overflow: hidden;
+    
 
     a{
         text-decoration: none;
@@ -16,19 +18,28 @@ const StyleCards = styled.div`
 `;
 const Conteudo = styled.div` 
     display: flex;
+    align-items:center;
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
     height: 100%;
+
+    img{
+        max-width: 200px;
+
+    }
+
+
     h3{
-        padding-left: 1rem;
+
         color: white;
         font-weight: bold;
         text-align: center;
     }
     h4{
         padding-left: 1rem;
-        color: black;
+        padding: 0.3rem 1rem;
+        color: white;
         font-weight: bold;
     }
 

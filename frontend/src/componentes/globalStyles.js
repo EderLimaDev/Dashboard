@@ -8,7 +8,7 @@ const EstilosGlobais = createGlobalStyle `
     }
 
     body{
-        background: #0B4C5F;
+        background: #0d86a2;
         overflow-x: hidden;
         text-decoration: none;
     }
@@ -29,7 +29,7 @@ const EstilosGlobais = createGlobalStyle `
     }
 
     h3{
-        color: white;
+        color: black;
     }
 
     a{

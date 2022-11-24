@@ -11,9 +11,6 @@ const Foto = styled(Image)`
     height: 50px;
 `;
 
-const H5 = styled.div`
-    color: yellow;
-`;
 
 const AdmDevice = ()=>{
  
@@ -85,11 +82,11 @@ const AdmDevice = ()=>{
                 <Table striped bordered hover variant="dark">
                     <thead>
                         <tr>
-                            <th><H5>Foto</H5></th>
-                            <th><H5>Device ID</H5></th>
-                            <th><H5>Nome</H5></th>
-                            <th><H5>Data de cadastro</H5></th>
-                            <th><H5>Ações</H5></th>
+                            <th><h5>Foto</h5></th>
+                            <th><h5>Device ID</h5></th>
+                            <th><h5>Nome</h5></th>
+                            <th><h5>Data de cadastro</h5></th>
+                            <th><h5>Ações</h5></th>
                         </tr>
                     </thead>
                     <tbody>

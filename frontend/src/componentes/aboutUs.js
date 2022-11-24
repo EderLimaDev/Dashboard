@@ -14,15 +14,21 @@ const Inicio = styled.div`
 const Descricao = styled.div`
     flex: 1;
     padding-right: 5rem;
-    h2{
-        font-weight: bold;
-        font-size: 3rem;
-        color: yellow;
-    }
+    background-color: #0b305e;
+    border-radius: 25px;
+    text-align: center;
+
     h3{
         font-weight: bold;
         font-size: 2rem;
         color: yellow;
+        padding-top: 20px;
+    }
+    p{
+        margin:auto;
+        width:100%;
+        margin-left: 2.7rem;
+    
     }
 
 
@@ -34,11 +40,8 @@ const AboutUsPage = ()=>{
         <Inicio>
             <Descricao>
             <div>
-            <h2>Sobre Nós</h2>
-            <h3>Alunos da UNIVESP</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3>MEDIDOR DE ENERGIA INTELIGENTE</h3>
+            <p>Este é um projeto da disciplina de TCC dos alunos da UNIVESP (Universidade Virtual do Estado de São Paulo) que tem por finalidade monitorar o consumo de energia dos dispositivos para controle de gastos.</p>
             </div>
             </Descricao>
         </Inicio>

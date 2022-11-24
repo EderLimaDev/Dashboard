@@ -25,7 +25,11 @@ const Descricao = styled.div`
         color: yellow;
        
     }
+    
+
 `;
+
+
 
  const Geral = styled.div`
     h5{
@@ -34,6 +38,7 @@ const Descricao = styled.div`
         font-weight: bold;
     }
  `;
+ 
 
 
  
