@@ -24,7 +24,7 @@ const ListaDevices = ()=>{
 
                 <tbody>
                 
-                        {data?.data?.message?.map(item =>{
+                        {data?.message?.map(item =>{
                             return(
                                 <tr>
                                     <td><Foto src={item.imagem} alt='imagem'></Foto></td>

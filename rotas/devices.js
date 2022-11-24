@@ -89,11 +89,11 @@ router.post('/', async (req, res)=>{
         nome: req.body.nome,
         email: req.body.email,
         descricao: req.body.descricao,
-        imagem: req.body.imagem
-        // kwh: req.body.kwh,
-        // corrente: req.body.corrente,
-        // voltagem: req.body.voltagem,
-        // fp: req.body.fp
+        imagem: req.body.imagem,
+        kwh: req.body.kwh,
+        corrente: req.body.corrente,
+        voltagem: req.body.voltagem,
+        fp: req.body.fp
     })
     try{
         const saveNovoDevice = await novoDevice.save()

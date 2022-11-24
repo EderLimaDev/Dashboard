@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {Container, Table, Image, Button} from "react-bootstrap"
 import {useApi} from '../../hooks/useApi'
 import moment from 'moment'
-import CaixaDialogo from './caixaDialogo'
+import caixaDialogo from './caixaDialogo'
 import FormEdit from './formEdit'
 import {deleteRegistro, editRegistro} from '../../services/api'
 
@@ -15,7 +15,7 @@ const H5 = styled.div`
     color: yellow;
 `;
 
-const AdmDevices = ()=>{
+const AdmDevice = ()=>{
  
     const {data} = useApi(`/devices`)
 
@@ -45,6 +45,7 @@ const AdmDevices = ()=>{
             callback: ed
         }
     })
+
     const [nome, setNome] = useState()
     const [descricao, setDescricao] = useState()
     const [imagem, setImagem] = useState()
@@ -94,7 +95,7 @@ const AdmDevices = ()=>{
                 <tbody>
                     {data?.message?.map(projeto =>{
                         return(<tr>
-                                <td><Foto src={projeto.imagem} thumbnail /></td>
+                                <td><Foto src={projeto.imagem} alt="imagem" /></td>
                                 <td>{projeto._id}</td>
                                 <td>{projeto.nome}</td>
                                 <td>{moment(projeto.data).format('DD-MM-YYYY')}</td>
@@ -107,29 +108,30 @@ const AdmDevices = ()=>{
                 </tbody>
 
             </Table>
-            <CaixaDialogo show={show} setShow={setShow} escAtual={escAtual} id={id} email={email}>
-                {escAtual.mostraBody && escAtual.body}
 
-                {!escAtual.mostraBody && (
-                    <FormEdit 
-                        nome={nome} 
-                        setNome={setNome} 
-                        id={id}
-                        setId={setId}
-                        email={email}
-                        setEmail={setEmail}
-                        descricao={descricao} 
-                        setdescricao={setDescricao} 
-                        imagem={imagem} 
-                        setImagem={setImagem}
-                    />
-                )}
-            </CaixaDialogo>
+            <caixaDialogo show={show} setShow={setShow} escAtual={escAtual} id={id} email={email}>
+                    {escAtual.mostraBody && escAtual.body}
+
+                    {!escAtual.mostraBody && (
+                        <FormEdit 
+                            nome={nome} 
+                            setNome={setNome} 
+                            id={id}
+                            setId={setId}
+                            email={email}
+                            setEmail={setEmail}
+                            descricao={descricao} 
+                            setdescricao={setDescricao} 
+                            imagem={imagem} 
+                            setImagem={setImagem}
+                        />
+                    )}
+                </caixaDialogo>
         </Container>
     )
 }
 
-export default  AdmDevices
+export default  AdmDevice
 
 
 
