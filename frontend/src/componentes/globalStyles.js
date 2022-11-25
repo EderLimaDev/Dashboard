@@ -32,6 +32,12 @@ const EstilosGlobais = createGlobalStyle `
 
     }
 
+    .detalhesDevices{
+        margin:auto;
+        padding-top:10vh;
+        text-align:center;
+    }
+
     .containerNewDevice{
         background-color:#0b305e;
         font-size:1.5rem;

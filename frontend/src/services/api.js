@@ -10,7 +10,7 @@ export const deleteRegistro = (id)=>{
     axios.delete(`/api/devices/${id}`)
         .then(res =>{
             console.log('Deletado', res)
-            window.location.reload()
+            window.location.reload() 
         })
         .catch(err => console.log(err))
 

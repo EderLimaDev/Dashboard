@@ -8,6 +8,8 @@ const ListaCards = styled.div`
     grid-template-columns: 200px repeat(auto-fill, 200px);
     grid-row-gap: 3rem;
     grid-column-gap: 3rem;
+    padding-top: 10px;
+
 
 
 `;

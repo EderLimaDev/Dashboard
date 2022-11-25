@@ -6,15 +6,19 @@ import {Container, Table} from 'react-bootstrap';
 
 
 const Titulo = styled.div` 
-    background-color: gray;
-    width: 70%;
-    min-height: 70vh;
-    position:absolute;
-    left: 15%;
+    background-color: #0b305e;
+    width: 100%;
+    min-height: 8vh;
+    padding-top: 15px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 5px;
 
-    h2{
-        padding-left: 1rem;
+    h4{
+        font-weight: bold;
         color: white;
+        text-transform:uppercase;
+        font-size:1.5rem ;
 
     }
 `;
@@ -26,8 +30,9 @@ const DetalhesDevice = ()=>{
     console.log(data)
     return(
         <>
-        <Titulo><h4>{data?.message?.nome}</h4></Titulo>
-        <Container>
+        
+        <Container className="detalhesDevices">
+            <Titulo><h4>{data?.message?.nome}</h4></Titulo>
                 <Table striped bordered hover variant="dark">
                     <thead>
                         <tr>

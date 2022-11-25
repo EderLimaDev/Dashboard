@@ -8,11 +8,12 @@ const devicesSchema =  new Schema({
     email: {type: String, required: true},
     slug: {type: String, required: true, unique:true, default: function(){return slug(this.nome)}},
     imagem: {type: String, required: true},
-    kwh:{type:Number},
-    corrente: {type: Number},
-    voltagem:{type:Number},
-    fp:{type:Number},
-    data:{type: Date, default: Date.now()}   
+    medidas:[]
+    // kwh:{type:Number},
+    // corrente: {type: Number},
+    // voltagem:{type:Number},
+    // fp:{type:Number},
+    // data:{type: Date, default: Date.now()}   
     
 })
 

@@ -28,19 +28,27 @@ const Conteudo = styled.div`
         max-width: 200px;
 
     }
+    h6{
+        text-align:center;
+        color: yellow;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 5px;
+        padding-bottom: 15px;
+    }
 
 
     h3{
-
         color: white;
         font-weight: bold;
         text-align: center;
     }
-    h4{
+    h5{
         padding-left: 1rem;
         padding: 0.3rem 1rem;
         color: white;
         font-weight: bold;
+        text-align: center;
     }
 
 `;
@@ -50,28 +58,30 @@ const Info = styled.div`
 `; 
 
 
-const Cards = ({projeto})=>{
+const Card = ({projeto})=>{
+    
+    // var ultimo = projeto.medidas.length
+    // console.log(ultimo)
+    
     return(
-       <>
-            <StyleCards>
-                    <Conteudo>
-                        <Link to={`/medidas/${projeto._id}`}>
-                            <h3>{projeto.nome}</h3>
-                            <img src={projeto.imagem} alt="imagem"/>
-                                <Info>
-                                    <h4>Kw/h :{projeto.kwh}</h4>
-                                    <h4>Amp :{projeto.corrente}</h4>
-                                    <h4>Volts :{projeto.voltagem}</h4>
-                                    <h4>F.P :{projeto.fp}</h4>
-                                </Info>
-                         </Link>  
-                    </Conteudo>
-            </StyleCards>
-
-        </> 
+        
+        <StyleCards>
+            <Link to={`/medidas/${projeto._id}`}>
+                <Conteudo>
+                    <h5>{projeto.nome}</h5>
+                    <img src={projeto.imagem} alt="Description"/>
+                    <h5>Últimas medidas:</h5>
+                    {/* <h6>{projeto.medidas[ultimo-1].data}, {projeto.medidas[ultimo-1].hora}</h6> */}
+                    <Info>
+                        <h6>Kw/h :{projeto.medidas.kwh}</h6>
+                        <h6>Amp :{projeto.corrente}</h6>
+                        <h6>Voltagem :{projeto.voltagem}</h6>
+                        <h6>Ft.P. :{projeto.fp}</h6>
+                    </Info>
+                </Conteudo>
+            </Link>
+     
+     </StyleCards>
     )
-
-
 }
-
-export default Cards
+export default Card
