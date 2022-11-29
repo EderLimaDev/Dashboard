@@ -2,8 +2,10 @@ import React from 'react';
 import {Button, Modal, ModalHeader, ModalBody, ModalFooter, ModalTitle} from 'react-bootstrap'
 
 const CaixaDialogo = ({show, setShow, escAtual, id, email, children})=> {
+   
     const acao = ()=>{
         escAtual.callback(id, children[1].props)
+        console.log(children)
         setShow(false)
 
     }

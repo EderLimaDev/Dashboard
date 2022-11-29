@@ -5,7 +5,7 @@ import {useApi} from '../../hooks/useApi'
 import moment from 'moment'
 import CaixaDialogo from './caixaDialogo'
 import FormEdit from './formEdit'
-import {deleteRegistro, editRegistro} from '../../services/api'
+import {editRegistro, deleteRegistro} from '../../services/api'
 import EstilosGlobais from '../globalStyles'
 
 const Foto = styled(Image)`
@@ -19,7 +19,7 @@ const AdmDevice = ()=>{
 
     const del = (id)=>{
         deleteRegistro(id)
-        window.location.reload();
+        window.location.reload()
     }
     const ed = (id, data)=>{
         editRegDevice(id, data)
@@ -59,8 +59,8 @@ const AdmDevice = ()=>{
         email: ''
     })
     
-    const manipulaShow = (device, escolha)=>{
-        setEscAtual(escolha)
+    const manipulaShow = (device, esc)=>{
+        setEscAtual(esc)
         setShow(true)
         setId(device._id)
         setEmail(device.email)

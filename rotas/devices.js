@@ -138,9 +138,9 @@ router.put('/:id', async (req, res)=>{
 })
 
 //deleta um único registro com base no id
-router.delete('/:id', async (req, res)=>{
+router.delete('/:id', async (req,res)=>{
     try{
-        const deleteMedidasId = await Medidas.deleteOne({
+        const deleteMedidasId = await Device.deleteOne({
             _id: req.params.id
         });
         res.json({
