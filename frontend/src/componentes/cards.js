@@ -32,16 +32,17 @@ const Conteudo = styled.div`
         text-align:center;
         color: yellow;
         font-weight: bold;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 5px;
-        padding-bottom: 15px;
+        padding-bottom: 9px;
     }
 
 
     h3{
-        color: white;
+        color: yellow;
         font-weight: bold;
         text-align: center;
+        font-size: 1rem;
     }
     h5{
         padding-left: 1rem;
@@ -49,6 +50,14 @@ const Conteudo = styled.div`
         color: white;
         font-weight: bold;
         text-align: center;
+    }
+
+    span{
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1rem;
+        padding-left: 10px;
     }
 
 `;
@@ -59,9 +68,9 @@ const Info = styled.div`
 
 
 const Card = ({projeto})=>{
-    
-    // var ultimo = projeto.medidas.length
-    // console.log(ultimo)
+    console.log(projeto)
+    var ultimo = projeto.medidas.length
+    console.log(ultimo)
     
     return(
         
@@ -71,12 +80,13 @@ const Card = ({projeto})=>{
                     <h5>{projeto.nome}</h5>
                     <img src={projeto.imagem} alt="Description"/>
                     <h5>Últimas medidas:</h5>
-                    {/* <h6>{projeto.medidas[ultimo-1].data}, {projeto.medidas[ultimo-1].hora}</h6> */}
+                    <h6>{projeto.medidas[ultimo-1].data}, {projeto.medidas[ultimo-1].hora}</h6>
+                    <h6>{projeto.medidas[ultimo-1].nest}</h6>
                     <Info>
-                        <h6>Kw/h :{projeto.medidas.kwh}</h6>
-                        <h6>Amp :{projeto.corrente}</h6>
-                        <h6>Voltagem :{projeto.voltagem}</h6>
-                        <h6>Ft.P. :{projeto.fp}</h6>
+                        <h3>Kw/h :<span>{projeto.medidas[ultimo-1].kwh}</span></h3>
+                        <h3>Amp :<span>{projeto.medidas[ultimo-1].corrente}</span></h3>
+                        <h3>Voltagem :<span>{projeto.medidas[ultimo-1].voltagem}</span></h3>
+                        <h3>Ft.P. :<span>{projeto.medidas[ultimo-1].fp}</span></h3>
                     </Info>
                 </Conteudo>
             </Link>

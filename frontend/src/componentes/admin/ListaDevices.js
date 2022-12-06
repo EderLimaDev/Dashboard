@@ -22,6 +22,7 @@ const ListaDevices = ()=>{
                     <tr className="tableHeader">
                         <th>Foto</th>
                         <th>Dispositivo</th>
+                        <th>Descrição</th>
                         <th>Data</th>
                     </tr>
                 </thead>
@@ -33,6 +34,7 @@ const ListaDevices = ()=>{
                                 <tr>
                                     <td><Foto src={item.imagem} alt='imagem'></Foto></td>
                                     <td>{item.nome}</td>
+                                    <td>{item.descricao}</td>
                                     <td>{moment(item.data).format('DD-MM-YYYY')}</td>
                                 </tr>)
                         })}

@@ -23,10 +23,13 @@ const NovoDevice = () => {
     const [email, setEmail] = useState()
     const [imagem, setImagem] = useState()
 
+
     const data = {nome, descricao, email, imagem}
 
     function Click(){
         addRegistro(data)
+        
+
     }
 
 
@@ -74,6 +77,8 @@ const NovoDevice = () => {
                     placeholder='Insira o link de uma Imagem'/>
                    
                 </Form.Group>
+                
+
               <Button variant="primary" onClick={()=> Click(data.email, data.nome,data.descricao, data.imagem)}>Salvar</Button>&nbsp;&nbsp;
               <Button variant="secondary" type="submit">Cancelar</Button>
     

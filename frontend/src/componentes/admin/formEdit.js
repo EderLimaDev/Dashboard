@@ -15,8 +15,7 @@ const FormEdit = ({nome, setNome, descricao, setDescricao, imagem, setImagem}) =
                 </FormGroup>
 
                 <FormGroup class="mb-3">
-                    <Form.Label 
-                    for="exampleInputEmail1" class="form-label">Descrição</Form.Label>
+                    <Form.Label for="exampleInputEmail1" class="form-label">Descrição</Form.Label>
                     <Form.Control 
                     as="textarea" 
                     rows='2'   
@@ -32,7 +31,7 @@ const FormEdit = ({nome, setNome, descricao, setDescricao, imagem, setImagem}) =
                     type='text'
                     value={imagem}
                     onChange={(e)=> setImagem(e.target.value)}   
-                    placeholder='Insira uma imagem para seu Dispositivo'/>
+                    placeholder='Insira um link de uma imagem para seu Dispositivo'/>
                    
                 </FormGroup>
               

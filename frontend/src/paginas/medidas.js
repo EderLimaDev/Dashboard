@@ -23,7 +23,7 @@ const ListaDevices = styled.div`
 `;
 
 const Medidas = ()=> {
-    const { data } = useApi('/devices');
+    const {data} = useApi(`/devices`);
     return (
       
         <ListaDevices>
@@ -33,7 +33,7 @@ const Medidas = ()=> {
                 })}
             </ListaCards>
         </ListaDevices>
-        
+    
     
     );
 

@@ -59,8 +59,8 @@ const AdmDevice = ()=>{
         email: ''
     })
     
-    const manipulaShow = (device, esc)=>{
-        setEscAtual(esc)
+    const manipulaShow = (device, escolha)=>{
+        setEscAtual(escolha)
         setShow(true)
         setId(device._id)
         setEmail(device.email)
@@ -120,7 +120,7 @@ const AdmDevice = ()=>{
                         email={email}
                         setEmail={setEmail}
                         descricao={descricao} 
-                        setdescricao={setDescricao} 
+                        setDescricao={setDescricao} 
                         imagem={imagem} 
                         setImagem={setImagem}
                         />
