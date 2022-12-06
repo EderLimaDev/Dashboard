@@ -16,6 +16,12 @@ const EstilosGlobais = createGlobalStyle `
         padding-top: 3rem;
         font-weight:bold;
         font-size:1.5em;
+        background:black;
+        height: 60px;
+        margin-top: 40px;
+        padding-top:0.2rem;
+        padding-left:0.2rem;
+        border-radius:12px 12px 0 0;
         
     }
 

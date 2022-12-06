@@ -49,7 +49,7 @@ const Admin = ()=>{
                 </Descricao>
                         <Tabs defaultActiveKey="devices" id="tab1" className="mb-1">
                             <EstilosGlobais />
-                            <Tab eventKey="devices" title="Meus Dispositivos">
+                            <Tab eventKey="devices" title="Meus Dispositivos" >
                                 <ListaDevices/>
                             </Tab>
                             <Tab eventKey="detalhes" title="Editar">
