@@ -36,7 +36,7 @@ const AdmDevice = ()=>{
             callback: del
         },
         edit:{
-            header: 'Editar Device:',
+            header: 'Editar Dispositivo:',
             variant: 'primary',
             label: 'Salvar',
             mostraBody: false,
@@ -85,7 +85,7 @@ const AdmDevice = ()=>{
                     <thead>
                         <tr className='tableHeader'>
                             <th><h5>Foto</h5></th>
-                            <th><h5>Device ID</h5></th>
+                            <th><h5>ID do Dispositivo</h5></th>
                             <th><h5>Nome</h5></th>
                             <th><h5>Data de cadastro</h5></th>
                             <th><h5>Ações</h5></th>

@@ -20,7 +20,9 @@ const CaixaDialogo = ({show, setShow, escAtual, id, email, children})=> {
 
                     <ModalHeader closeButton>
                         <ModalTitle>{escAtual.header}<br/>
+                                    <label>ID:&nbsp;&nbsp;</label>
                                     {id}<br/>
+                                    <label>Usuário:&nbsp;&nbsp;</label> 
                                     {email}<br/>   
                         </ModalTitle>
                     </ModalHeader> 
